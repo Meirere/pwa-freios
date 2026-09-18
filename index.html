@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Perícia em Sistema de Freio | CTP</title>
+<link rel="manifest" href="manifest.json">
 
 <meta name="theme-color" content="#0b3d91">
 
@@ -97,6 +98,10 @@ h1 {
   cursor: pointer;
 }
 
+.whatsapp {
+background: linear-gradient(135deg, #25d366, #128c4a);
+}
+
 .voltar {
   display: block;
   text-align: center;
@@ -119,7 +124,7 @@ footer {
 
 <div class="container">
 
-<img src="curso-freios.png"
+<img src="icon.png"
      alt="Curso de Perícia em Sistema de Freio de Veículos Pesados"
      class="capa">
 
@@ -171,9 +176,16 @@ Chave PIX (CPF):
 Copiar chave PIX
 </button>
 
+<a class="botao whatsapp"
+   href="https://wa.me/5581994159837?text=Ol%C3%A1%21%20Estou%20enviando%20o%20comprovante%20de%20pagamento%20do%20curso%20Per%C3%ADcia%20em%20Sistema%20de%20Freio%20de%20%C3%94nibus%2C%20Caminh%C3%B5es%20e%20Carretas."
+   target="_blank"
+   rel="noopener">
+Enviar comprovante pelo WhatsApp
+</a>
+
 </div>
 
-<a class="voltar" href="https://meirere.github.io/pwa-hub/">
+<a class="voltar" href="https://meirere.github.io/pwa-cursos/">
 ← Voltar para Cursos
 </a>
 
@@ -191,6 +203,10 @@ function copiarPix() {
   navigator.clipboard.writeText(chave).then(() => {
     alert('Chave PIX copiada!');
   });
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
 }
 
 </script>
