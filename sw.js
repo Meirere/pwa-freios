@@ -1,4 +1,4 @@
-const CACHE_NAME = 'freios-ctp-cache-v4';
+const CACHE_NAME = 'freios-ctp-cache-v5';
 
 const urlsToCache = [
   './',
